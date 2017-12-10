@@ -1,0 +1,29 @@
+﻿@using MyClassLibrary
+
+@*@{
+    ViewData["submissions"] = "Submission";
+}*@
+<h2>Admin</h2>
+
+
+<br/><table style="width: 80%">
+    <tr>
+        <td><b>First name</b></td>
+        <td><b>Surname</b></td>
+        <td><b>Email</b></td>
+        <td><b>Phone number</b></td>
+        <td><b>Date of birth</b></td>
+        <td><b>Serial number</b></td>
+    </tr>
+         @foreach (var submission in ViewData["submissions"] as List<Submission>)
+         {
+             <tr>
+                 <td>@submission.FirstName</td>
+                 <td>@submission.SurName</td>
+                 <td>@submission.Email</td>
+                 <td>@submission.PhoneNumb</td>
+                 <td>@submission.DateOfBirth</td>
+                 <td>@submission.SerialNumb</td>
+             </tr>
+         }
+</table>

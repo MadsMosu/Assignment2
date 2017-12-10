@@ -1,0 +1,42 @@
+﻿
+@*@{
+    ViewData["Title"] = "Submission";
+    
+}*@
+@using Assignment2.Models
+@using MyClassLibrary
+@model MyClassLibrary.Submission
+<h2>Submission</h2>
+<form method="post" asp-controller="Submission" asp-action="Index">
+    <div>
+        <div>
+            <input asp-for="FirstName" placeholder="First name" />
+            <span asp-validation-for="FirstName"></span>
+
+        </div><br />
+        <div>
+            <input asp-for="SurName" placeholder="Surname" />
+            <span asp-validation-for="SurName"></span>
+        </div><br />
+        <div>
+            <input asp-for="Email" placeholder="Email" />
+            <span asp-validation-for="Email"></span>
+        </div><br />
+        <div>
+            <input asp-for="PhoneNumb" placeholder="Phone number" />
+            <span asp-validation-for="PhoneNumb"></span>
+        </div><br />
+        <div>
+            <input asp-for="DateOfBirth" />
+            <span asp-validation-for="DateOfBirth"></span>
+        </div><br />
+        <div>
+            <input asp-for="SerialNumb" placeholder="Serial key" />
+            <span asp-validation-for="SerialNumb"></span>
+        </div><br />
+        <div>
+            <input type="Submit" name="submit" value="Submit" />
+        </div><br/>
+    </div>
+</form>
+
